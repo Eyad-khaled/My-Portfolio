@@ -1,10 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Sekuya,
+  Edu_NSW_ACT_Cursive,
+  Archivo_Black
+} from "next/font/google";
 import "./globals.css";
+import ScrollSmootherProvider from "./components/scrollSmoother";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+const sekuya = Sekuya({
+  variable: "--font-sekuya",
   subsets: ["latin"],
+  weight: "400",
+});
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo-black",
+  subsets: ["latin"],
+  weight: "400",
+});
+const cursive = Edu_NSW_ACT_Cursive({
+  variable: "--font-edu-nsw-act-cursive",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 const geistMono = Geist_Mono({
@@ -21,9 +44,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${sekuya.variable} ${archivoBlack.variable} ${cursive.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ScrollSmootherProvider>{children}</ScrollSmootherProvider>
+      </body>
     </html>
   );
 }
