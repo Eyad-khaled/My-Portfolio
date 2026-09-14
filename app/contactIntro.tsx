@@ -31,8 +31,8 @@ function ContactCircle() {
         xPercent:250,
         duration:1,
         ease:'power3.out',
-        onComplete:()=>{gsap.set('#page' , {background:"black"})}
-       },"<1.3>").from(paraLines.lines,{
+    
+       },"<1.3>").to('#page' , {background:"black"},"<").from(paraLines.lines,{
         yPercent:100,
         autoAlpha:0.5,
         stagger:{
