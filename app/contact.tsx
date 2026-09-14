@@ -66,7 +66,7 @@ function Contact() {
     })
 
     return (
-        <div id='contact' className="h-screen w-full relative bg-black mt-10">
+        <div id='contact' className="h-[90vh] lg:h-screen w-full relative bg-black mt-10">
            <ul className='flex justify-around items-center text-white pt-10 flex-wrap gap-10'>
             {listItems.map((item)=>(
                 <LinkButtonContact href={item.link} name={item.title} key={item.title}/>
