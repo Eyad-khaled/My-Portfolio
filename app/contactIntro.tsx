@@ -51,7 +51,7 @@ function ContactCircle() {
         <div id='circle' className="w-10 h-10 bg-white rounded-full top-0">
          
          </div>
-         <h1 id='title' className='text-4xl lg:text-6xl font-hand font-bold text-black absolute left-10 top-100'>Contact me</h1>
+         <h1 id='title' className='text-4xl lg:text-6xl font-hand font-bold text-black absolute left-0 lg:left-10 top-100'>Contact me</h1>
         <p id='paragraph' className='font-cursive font-semibold text-lg text-black max-w-25 absolute right-50 bottom-20'>  looking for new oppportinities , and Eager to join an innovative team and contribute to ambitious projects.</p>
         </div>
     )

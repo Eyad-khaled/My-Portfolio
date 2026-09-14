@@ -322,7 +322,7 @@ const Landing = ({ setIsDone }: { setIsDone: (value: boolean) => void }) => {
           className="left-5 w-full h-[0.5px] bg-white origin-left scale-x-0"
         ></div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full ">
+      <div className="absolute bottom-20 lg:bottom-0 left-0 w-full ">
         <ul className="flex justify-center items-center w-full py-4 gap-4">
           {linkItems.map((item) => (
             <LinkButton key={item.href} href={item.href} name={item.name} />
