@@ -8,7 +8,7 @@ import LinkButton from "./components/LinkButtonLanding";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
-const Landing = ({setIsDone}) => {
+const Landing = ({ setIsDone }: { setIsDone: (value: boolean) => void }) => {
   const linkItems = [
     { name: "About", href: "#about" },
     { name: "Work", href: "#work" },
@@ -48,7 +48,7 @@ const Landing = ({setIsDone}) => {
     // document.body.style.overflow = "hidden";
     
     const tl = gsap.timeline();
-    const letters = document.querySelectorAll("#eyad path");
+    const letters = document.querySelectorAll<SVGPathElement>("#eyad path");
 
     letters.forEach((path) => {
       const length = path.getTotalLength();

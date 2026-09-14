@@ -34,7 +34,7 @@ const Skills = () => {
   useGSAP(
     () => {
       const titleEl = container.current?.querySelector("#skills-title");
-      const labelEl = container.current?.querySelector("#skills-label");
+      const labelEl = container.current?.querySelector<HTMLElement>("#skills-label");
 
       if (titleEl) {
         const titleSplit = SplitText.create(titleEl, {
@@ -50,53 +50,57 @@ const Skills = () => {
           ease: "power4.out",
         });
       }
+      if (labelEl) {
 
-      gsap.from(labelEl, {
-        scrollTrigger: { trigger: "#skills", start: "top 75%" },
-        opacity: 0,
-        y: 20,
-        duration: 0.7,
-        ease: "power3.out",
-      });
+        gsap.from(labelEl, {
+          scrollTrigger: { trigger: "#skills", start: "top 75%" },
+          opacity: 0,
+          y: 20,
+          duration: 0.7,
+          ease: "power3.out",
+        });
+      }
 
       const groups = gsap.utils.toArray<HTMLElement>(".skill-group");
 
-      groups.forEach((group, i) => {
-        const heading = group.querySelector(".skill-group-label");
-        const pills = group.querySelectorAll(".skill-pill");
-        const line = group.querySelector(".skill-group-line");
+      groups.forEach((group) => {
+  const heading = group.querySelector<HTMLElement>(".skill-group-label");
+  const pills = group.querySelectorAll<HTMLElement>(".skill-pill");
+  const line = group.querySelector<HTMLElement>(".skill-group-line");
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: group,
-            start: "top 85%",
-          },
-        });
+  if (!heading || !line) return;
 
-        tl.fromTo(
-          heading,
-          { opacity: 0, x: -30 },
-          { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
-        )
-          .fromTo(
-            line,
-            { scaleX: 0 },
-            { scaleX: 1, duration: 0.6, ease: "power2.out" },
-            "<"
-          )
-          .fromTo(
-            pills,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.5,
-              stagger: 0.06,
-              ease: "power2.out",
-            },
-            "<+=0.1"
-          );
-      });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: group,
+      start: "top 85%",
+    },
+  });
+
+  tl.fromTo(
+    heading,
+    { opacity: 0, x: -30 },
+    { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
+  )
+    .fromTo(
+      line,
+      { scaleX: 0 },
+      { scaleX: 1, duration: 0.6, ease: "power2.out" },
+      "<"
+    )
+    .fromTo(
+      pills,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.06,
+        ease: "power2.out",
+      },
+      "<+=0.1"
+    );
+});
 
       ScrollTrigger.refresh();
     },
