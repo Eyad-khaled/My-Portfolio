@@ -316,7 +316,7 @@ const Landing = ({ setIsDone }: { setIsDone: (value: boolean) => void }) => {
           />
         </g>
       </svg>
-      <div className="w-[95%] absolute bottom-20 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+      <div className="w-[95%] absolute bottom-30 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex justify-center items-center">
         <div
           id="line"
           className="left-5 w-full h-[0.5px] bg-white origin-left scale-x-0"
