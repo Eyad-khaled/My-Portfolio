@@ -5,12 +5,12 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-export default function LinkButton({ href , name }: { href: string; name: string }) {
+export default function LinkButtonContact({ href , name }: { href: string; name: string }) {
     gsap.registerPlugin(SplitText, ScrollToPlugin);
     useGSAP(() => {
-    const textContainers = gsap.utils.toArray<HTMLElement>(".hover-text");
-  const textOriginal = gsap.utils.toArray<HTMLElement>(".original-text");
-  const textSub = gsap.utils.toArray<HTMLElement>(".sub-text");
+    const textContainers = gsap.utils.toArray<HTMLElement>(".hover-text-contact");
+  const textOriginal = gsap.utils.toArray<HTMLElement>(".original-text-contact");
+  const textSub = gsap.utils.toArray<HTMLElement>(".sub-text-contact");
 
     textContainers.forEach((textContainer, i) => {
       const tl = gsap.timeline({ paused: true });
@@ -25,7 +25,7 @@ export default function LinkButton({ href , name }: { href: string; name: string
         duration: 0.6,
         ease: "power3.out",
         stagger: {
-          each: 0.05,
+          amount: 0.5,
         },
       }).to(
         textOriginalSplit.chars,
@@ -34,7 +34,7 @@ export default function LinkButton({ href , name }: { href: string; name: string
           duration: 0.6,
           ease: "power3.out",
           stagger: {
-            each: 0.05,
+            amount: 0.5,
           },
         },
         "=<",
@@ -53,11 +53,11 @@ export default function LinkButton({ href , name }: { href: string; name: string
     gsap.set(textSub, { yPercent: 0 });
   });
     return(
-        <li onClick={()=>{gsap.to(window,{scrollTo: href, duration: 2, ease: "power2.out"})}} className="text-[15px] opacity-0 hover-text cursor-pointer text-white uppercase font-bold font-hand overflow-hidden relative">
+        <Link href={href} className="text-[15px] hover-text-contact cursor-pointer text-white uppercase font-bold font-archivo-black overflow-hidden relative">
           
-          <p className="original-text ">{name}</p>
+          <p className="original-text-contact ">{name}</p>
           <p
-            className="sub-text absolute"
+            className="sub-text-contact absolute"
             style={{
                 color: "transparent",
                 WebkitTextStroke: "0.5px white",
@@ -66,6 +66,6 @@ export default function LinkButton({ href , name }: { href: string; name: string
             {name}
           </p>
             
-        </li>
+        </Link>
     )
 }

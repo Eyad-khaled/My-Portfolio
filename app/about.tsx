@@ -237,6 +237,16 @@ const About = () => {
       id="about"
       className="min-h-screen w-full flex flex-col relative bg-[#d5cfbe] px-10"
     >
+       <div>
+          <p
+            id="work-label"
+            className="mb-5 font-hand text-sm uppercase tracking-[0.25em] text-[#2e78ff]"
+          >
+            01 / About
+          </p>
+
+          
+        </div>
       <div className="">
         <h1
           id="aboutText"

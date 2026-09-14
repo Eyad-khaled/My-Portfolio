@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import DrawSVGPlugin from "gsap/DrawSVGPlugin";
 import { SplitText } from "gsap/SplitText";
-import LinkButton from "./components/LinkButton";
+import LinkButton from "./components/LinkButtonLanding";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
@@ -208,7 +208,7 @@ const Landing = ({setIsDone}) => {
   return (
     <div
       id="landing"
-      className="h-screen w-full flex justify-center items-center relative overflow-hidden bg-black"
+      className="h-screen w-screen flex justify-center items-center relative overflow-hidden bg-black"
     >
       <h1
         id="desc"

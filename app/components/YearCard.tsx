@@ -60,10 +60,10 @@ const YearCard = ({ year, className = "" }: YearCardProps) => {
         <DigitReel startDigit={startUnits} targetDigit={targetUnits} />
       </div>
 
-      <h1 className="text-2xl text-black font-bold pt-2 capitalize card-title font-hand">
+      <h1 className="text-xl text-black font-semibold pt-2 capitalize card-title font-hand ">
         {year.title}
       </h1>
-      <p className="font-light font-cursive text-[17px] text-black opacity-75 capitalize absolute bottom-5 left-5 max-w-[90%] card-description">
+      <p className="font-semibold font-cursive text-[17px] text-black opacity-75 capitalize absolute bottom-5 left-5 max-w-[90%] card-description">
         {year.description}
       </p>
     </div>
