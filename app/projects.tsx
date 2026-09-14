@@ -298,7 +298,7 @@ const Products = () => {
     alt={project.name}
     fill
     sizes="(max-width: 768px) 100vw, 65vw"
-    className="project-image h-[80%] w-full -translate-y-[7%] object-cover"
+    className="project-image h-[80%] w-full -translate-y-[7%] object-fill lg:object-cover"
     priority
   />
 </div>

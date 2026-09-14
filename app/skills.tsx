@@ -132,7 +132,7 @@ const Skills = () => {
         {skillGroups.map((group) => (
           <div key={group.label} className="skill-group">
             <div className="mb-6 flex items-center gap-6">
-              <h3 className="skill-group-label whitespace-nowrap font-archivo-black text-2xl uppercase text-black md:text-3xl">
+              <h3 className="skill-group-label whitespace-nowrap font-archivo-black text-xl uppercase text-black md:text-3xl">
                 {group.label}
               </h3>
               <div className="skill-group-line h-[1px] w-full origin-left bg-black/40" />

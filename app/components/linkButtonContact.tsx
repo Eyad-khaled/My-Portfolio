@@ -53,7 +53,7 @@ export default function LinkButtonContact({ href , name }: { href: string; name:
     gsap.set(textSub, { yPercent: 0 });
   });
     return(
-        <Link href={href} className="text-[15px] hover-text-contact cursor-pointer text-white uppercase font-bold font-archivo-black overflow-hidden relative">
+        <Link href={href} className="text-[15px] basis-1/3 hover-text-contact cursor-pointer text-white uppercase font-bold font-archivo-black overflow-hidden relative">
           
           <p className="original-text-contact ">{name}</p>
           <p
