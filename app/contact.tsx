@@ -66,15 +66,15 @@ function Contact() {
     })
 
     return (
-        <div id='contact' className="h-[90vh] lg:h-screen w-full relative bg-black mt-10">
+        <div id='contact' className="h-[90vh] md:h-screen w-full relative bg-black mt-10">
            <ul className='flex justify-around items-center text-white pt-10 flex-wrap gap-10'>
             {listItems.map((item)=>(
                 <LinkButtonContact href={item.link} name={item.title} key={item.title}/>
             ))}
            </ul>
-          <div className="full-name absolute bottom-20 lg:bottom-0 left-1/2 transform -translate-x-1/2 flex justify-between px-10 w-full items-center text-[12vw] font-bold">
-           <h1 id='eyad-contact'>Eyad</h1>
-           <h1 id='elgendy'>Elgendy</h1>
+          <div className="full-name absolute bottom-4 lg:bottom-10 left-1/2 transform -translate-x-1/2 flex justify-between px-10 w-full items-center text-[12vw] font-bold">
+           <h1 id='eyad-contact'  className="font-archivo-black">Eyad</h1>
+           <h1 id='elgendy' className="font-cursive">Elgendy</h1>
             
           </div>
 
