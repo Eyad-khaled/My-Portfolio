@@ -16,15 +16,19 @@ interface SkillGroup {
 const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
+    skills: ["JavaScript", "TypeScript"],
   },
   {
     label: "Frameworks & Libraries",
-    skills: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS", "GSAP"],
+    skills: ["React", "Next.js", "Redux/Toolkit", "Tailwind CSS", "bootstrap" , "Material UI", "PrimeReact" , "React Bits"],
   },
   {
-    label: "Tools & Platforms",
-    skills: ["Git", "GitHub", "Vercel", "Supabase"],
+    label: "Animation",
+    skills: ["GSAP"],
+  },
+  {
+    label: "Web Tools & Platforms",
+    skills: ["HTML", "CSS","Git", "GitHub", "Vercel", "Supabase" , "vite"],
   },
 ];
 

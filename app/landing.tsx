@@ -212,13 +212,13 @@ const Landing = ({ setIsDone }: { setIsDone: (value: boolean) => void }) => {
     >
       <h1
         id="desc"
-        className="capitalize opacity-0 absolute top-15 left-15 font-cursive text-[10px] md:text-[15px] flex justify-center overflow-hidden gap-2 items-center"
+        className="capitalize opacity-0 absolute top-15 left-0 lg:left-15 font-cursive text-[10px] md:text-[15px] flex justify-center overflow-hidden gap-2 items-center"
       >
         a quite developer bringing ideas to life
       </h1>
       <h1
         id="correction"
-        className="capitalize opacity-0 absolute top-6 left-20 font-cursive text-[15px] flex justify-center overflow-hidden gap-2 items-center"
+        className="capitalize opacity-0 absolute top-6 left-5 lg:left-20 font-cursive text-[15px] flex justify-center overflow-hidden gap-2 items-center"
       >
         not-so quite
       </h1>
