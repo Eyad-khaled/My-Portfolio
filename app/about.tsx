@@ -105,12 +105,12 @@ const About = () => {
 
       journeyTl.from("#linePath", {
         drawSVG: 0,
-        duration: 4,
+        duration: 10,
         ease: "power1.inOut",
       });
       journeyTl.from(
         dots,
-        { autoAlpha: 0, stagger: 1, duration: 0.5, ease: "power1.inOut" },
+        { autoAlpha: 0, stagger: { amount: 7 }, duration: 0.5, ease: "power1.inOut" , delay:1},
         "<",
       );
       journeyTl.from(
@@ -118,7 +118,7 @@ const About = () => {
         {
           delay: 0.5,
           autoAlpha: 0,
-          stagger: 1,
+          stagger: { amount: 7 },
           duration: 1,
           ease: "power1.inOut",
         },
